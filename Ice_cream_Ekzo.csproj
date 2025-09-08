@@ -86,6 +86,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Files\delaniye\excel\Material_type_import.xls" />
+    <None Include="Files\delaniye\excel\Product_type_import.xls" />
+    <None Include="Files\delaniye\Products_import.xls" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1.zip" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Приложение 1.pdf" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Приложение 2.pdf" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Material_type_import.xlsx" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Partners_import.xlsx" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Partner_products_import.xlsx" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Products_import.xlsx" />
+    <None Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Product_type_import.xlsx" />
+    <None Include="Files\KOD_09_02_07-2-2025_Tom_1.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\delaniye\sql\create tables.sql" />
+    <Resource Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Мастер пол.ico" />
+    <Resource Include="Files\KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1\Ресурсы\Мастер пол.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
