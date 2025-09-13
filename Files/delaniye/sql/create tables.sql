@@ -1,2 +1,73 @@
 USE _Podgotovka_PersianinovaPanteleev_
 
+GO
+CREATE TABLE ProductTypes
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Title NVARCHAR(50) NOT NULL,
+	Coefficient DECIMAL(3, 2) NOT NULL
+)
+
+GO
+CREATE TABLE MaterialTypes
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Title NVARCHAR(50) NOT NULL,
+	DefectPercent DECIMAL(3, 2) NOT NULL
+)
+
+GO
+CREATE TABLE Products 
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Article INT NOT NULL,
+	ProductTypeId INT REFERENCES ProductTypes(Id) NOT NULL,
+	Title NVARCHAR(100) NOT NULL,
+	Description NVARCHAR(500),
+	ImagePath NVARCHAR(256),
+	MinCostForPartner DECIMAL(10, 2) NOT NULL,
+	BoxSize NVARCHAR(20) NOT NULL,
+	Weight INT NOT NULL,
+	WeightWithBox INT NOT NULL,
+	CertificateQuality INT NOT NULL,
+	StandartNumber INT NOT NULL,
+	MinCostChanges NVARCHAR(MAX),
+	ManufactureDate DATE NOT NULL,
+	PrimeCost DECIMAL(10, 2) NOT NULL,
+	WorkshopNumber INT NOT NULL,
+	EmployeeQuantity INT NOT NULL,
+	MaterialTypeId INT REFERENCES MaterialTypes(Id) NOT NULL
+)
+
+GO
+CREATE TABLE PartnerTypes 
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Title NVARCHAR(50) NOT NULL
+)
+
+GO
+CREATE TABLE Partners 
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Title NVARCHAR(50) NOT NULL,
+	LegalAddress NVARCHAR(100) NOT NULL,
+	INN INT NOT NULL,
+	DirectorName NVARCHAR(100) NOT NULL,
+	Phone NVARCHAR(20) NOT NULL,
+	Email NVARCHAR(50) NOT NULL,
+	Logo NVARCHAR(256),
+	Rating INT NOT NULL
+)
+
+GO
+CREATE TABLE Sales 
+(
+	Id INT PRIMARY KEY IDENTITY,
+	ProductId INT REFERENCES Products(Id) NOT NULL,
+	PartnerId INT REFERENCES Partners(Id) NOT NULL,
+	ProductQuantity INT NOT NULL,
+	SaleDate DATE NOT NULL,
+	SalePlace NVARCHAR(100) NOT NULL
+)
+
