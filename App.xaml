@@ -4,6 +4,32 @@
              xmlns:local="clr-namespace:Ice_cream_Ekzo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="MainBackground">#ffffff</SolidColorBrush>
+            <SolidColorBrush x:Key="SecondBackground">#f4e8d3</SolidColorBrush>
+            <SolidColorBrush x:Key="Accent">#67ba80</SolidColorBrush>
+
+            <Style TargetType="TextBlock" x:Key="Text">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+            </Style>
+
+            <Style TargetType="ComboBox" x:Key="Combo">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+            </Style>
+
+            <Style TargetType="TextBox" x:Key="Textbox">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+            </Style>
+
+            <Style TargetType="Button" x:Key="Button">
+                <Setter Property="FontSize" Value="25"></Setter>
+                <Setter Property="Padding" Value="10"></Setter>
+                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+                <Setter Property="Background" Value="{StaticResource Accent}"></Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -5,8 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ice_cream_Ekzo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="МастерПол - Главная страница" Height="720" Width="1280"
+        MinHeight="720" MinWidth="1280"
+        WindowState="Maximized">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical">
+            <Image Source="/Files/KOD_09_02_07-2-2025_Prilozhenia_k_obraztsu_zadania_Tom_1/Ресурсы/Мастер пол.png"
+                   Width="100"
+                   Margin="10"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"></Image>
+            <TextBlock Text="МастерПол"
+                       Style="{StaticResource Text}"
+                       TextAlignment="Center"
+                       Margin="0 0 0 10"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Background="{StaticResource SecondBackground}"
+                    >
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 50 0 0">
+                
+                <TextBlock Text="Фильтр"
+                           Style="{StaticResource Text}"
+                           FontSize="25"
+                           TextAlignment="Center"></TextBlock>
+                <ComboBox Width="150"
+                          Style="{StaticResource Combo}"></ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="0 50 0 0">
+
+                <TextBlock Text="Поиск"
+                           Style="{StaticResource Text}"
+                           FontSize="25"
+                           TextAlignment="Center"></TextBlock>
+                <TextBox Width="150"
+                         Style="{StaticResource Textbox}"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 50 0 0">
+
+                <Button Style="{StaticResource Button}"
+                        Width="150"
+                        Content="Добавить"></Button>
+                <Button Style="{StaticResource Button}"
+                        Width="150"
+                        Content="Удалить"></Button>
+                <Button Style="{StaticResource Button}"
+                        Width="150"
+                        Content="Изменить"></Button>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Background="{StaticResource SecondBackground}">
+            <TextBlock Text="Партнёры"
+                       Style="{StaticResource Text}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       FontSize="100"></TextBlock>
+        </StackPanel>
+
+        <Frame x:Name="MainWindowFrame"
+               Grid.Column="1"
+               Grid.Row="1"></Frame>
+
     </Grid>
 </Window>

@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Ice_cream_Ekzo.Pages;
 
-namespace Ice_cream_Ekzo
+namespace Ice_cream_Ekzo.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddEditWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddEditWindow : Window
     {
-        public MainWindow()
+        public AddEditWindow()
         {
             InitializeComponent();
-            MainWindowFrame.Navigate(new PartnerPage());
         }
     }
 }

@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Ice_cream_Ekzo.Pages;
 
-namespace Ice_cream_Ekzo
+namespace Ice_cream_Ekzo.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PartnerPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PartnerPage : Page
     {
-        public MainWindow()
+        public PartnerPage()
         {
             InitializeComponent();
-            MainWindowFrame.Navigate(new PartnerPage());
         }
     }
 }
